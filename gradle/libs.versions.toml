@@ -1,0 +1,22 @@
+[versions]
+kotlin = "2.4.21"
+exposed = "1.6.0"
+postgres = "42.7.14"
+testcontainers = "1.21.4"
+kotlinx-serialization-json = "1.12.0"
+
+[libraries]
+exposed-core = { module = "org.jetbrains.exposed:exposed-core", version.ref = "exposed" }
+exposed-jdbc = { module = "org.jetbrains.exposed:exposed-jdbc", version.ref = "exposed" }
+exposed-json = { module = "org.jetbrains.exposed:exposed-json", version.ref = "exposed" }
+exposed-migration-jdbc = { module = "org.jetbrains.exposed:exposed-migration-jdbc", version.ref = "exposed" }
+postgres-jdbc = { module = "org.postgresql:postgresql", version.ref = "postgres" }
+testcontainers-postgresql = { module = "org.testcontainers:postgresql", version.ref = "testcontainers" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization-json" }
+
+[bundles]
+exposed-postgres = ["exposed-core", "exposed-jdbc", "exposed-migration-jdbc", "postgres-jdbc", "testcontainers-postgresql"]
+
+[plugins]
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
