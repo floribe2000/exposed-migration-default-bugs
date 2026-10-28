@@ -8,7 +8,7 @@ import org.jetbrains.exposed.v1.migration.jdbc.MigrationUtils
 import org.testcontainers.containers.PostgreSQLContainer
 import kotlin.test.assertEquals
 
-private val postgres = PostgreSQLContainer<Nothing>("postgres:18.1").apply { start() }
+private val postgres = PostgreSQLContainer<Nothing>("postgres:18.6").apply { start() }
 
 private val database =
     Database.connect(

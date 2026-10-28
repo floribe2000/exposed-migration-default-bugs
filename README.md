@@ -4,7 +4,7 @@ Reproduces two bugs in `SchemaUtilityApi.dbDefaultToString()` that make
 `MigrationUtils.statementsRequiredForDatabaseMigration()` report `SET DEFAULT` statements for tables
 that were just created from the very same Exposed definition.
 
-Exposed 1.6.0, PostgreSQL 18.1 (Testcontainers, Docker required), JDK 21.
+Exposed 1.6.0, PostgreSQL 18.6 (Testcontainers, Docker required), JDK 21.
 
 ```shell
 ./gradlew test --continue
